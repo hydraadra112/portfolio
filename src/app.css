@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+@plugin '@tailwindcss/typography';
+
+:root {
+	padding-inline: 1.5rem;
+	margin: 0;
+	--color-primary: #232432;
+	--color-secondary: #2B2B2B;
+	--color-accent: #EAEEFF; 
+}
+
+.color
+
+html, body {
+	height: 100%;
+}
+
+h1 {
+    font-family: 'Monomaniac One', sans-serif;
+    font-size: 96px;
+}
+
+a, p {
+    font-family: "Miriam Libre", sans-serif;
+    font-size: 24px;
+}
+
