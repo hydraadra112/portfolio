@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Me from '$lib/images/me.svelte';
+	import Project from '$lib/components/Project.svelte';
+	import projects from '$lib/_data/projects';
 	
 </script>
 
@@ -22,9 +24,24 @@
 			<p class="color-accent">Download Resume</p>
 		</button>
 	</div>
-
 	<Me />
 </section>
+
+<section id='projects' class="mt-[7rem] flex flex-col">
+	<h1 class="text-center">PROJECTS</h1>
+	<div class="flex flex-col gap-y-10">
+		{#each projects as project (project.ProjectIndex)}
+		<Project
+		  ProjectIndex={project.ProjectIndex}
+		  ProjectName={project.ProjectName}
+		  ProjectDescription={project.ProjectDescription}
+		  IMGPath={project.IMGPath}
+		/>
+	  	{/each}
+	</div>
+</section>
+
+
 
 <style lang="postcss">
 	@reference "tailwindcss";
