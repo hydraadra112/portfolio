@@ -5,14 +5,27 @@
     export let IMGPath = '';
 </script>
 
-<div class="flex flex-row items-center gap-x-10">
-    <h1>{ProjectIndex}</h1>
-    <img src={IMGPath} alt={ProjectName} class="h-[14rem] w-auto rounded-[4rem]"/>
-    <div class="ml-2 w-[40rem]">
-        <h1>{ProjectName}</h1>
-        <p>{ProjectDescription}</p>
+{#if ProjectIndex % 2 === 0}
+    <!-- Right-aligned layout for even ProjectIndex -->
+    <div class="flex flex-row-reverse items-center gap-x-10 text-right">
+        <h1>{ProjectIndex}</h1>
+        <img src={IMGPath} alt={ProjectName} class="h-[14rem] w-auto rounded-[4rem]" />
+        <div class="mr-2 w-[40rem]">
+            <h1>{ProjectName}</h1>
+            <p>{ProjectDescription}</p>
+        </div>
     </div>
-</div>
+{:else}
+    <!-- Left-aligned layout for odd ProjectIndex -->
+    <div class="flex flex-row items-center gap-x-10">
+        <h1>{ProjectIndex}</h1>
+        <img src={IMGPath} alt={ProjectName} class="h-[14rem] w-auto rounded-[4rem]"/>
+        <div class="ml-2 w-[40rem]">
+            <h1>{ProjectName}</h1>
+            <p>{ProjectDescription}</p>
+        </div>
+    </div>
+{/if}
 
 <style lang="postcss">
 	@reference "tailwindcss";

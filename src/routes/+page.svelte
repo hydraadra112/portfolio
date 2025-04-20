@@ -52,12 +52,4 @@
 	.color-accent {
 		color: #EAEEFF; 
 	}
-
-	p, a {
-		color: #2B2B2B;
-	}
-
-	h1 {
-		color: #232432;
-	}
 </style>

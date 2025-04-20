@@ -19,10 +19,12 @@ html, body {
 h1 {
     font-family: 'Monomaniac One', sans-serif;
     font-size: 96px;
+	color: var(--color-primary);
 }
 
 a, p {
     font-family: "Miriam Libre", sans-serif;
     font-size: 24px;
+	color: var(--color-secondary);
 }
 
