@@ -3,6 +3,19 @@
 	import Project from '$lib/components/Project.svelte';
 	import projects from '$lib/_data/projects';
 	
+	import flutter from '$lib/images/techstack/flutter.svg';
+	import github from '$lib/images/techstack/github.svg';
+	import matplotlib from '$lib/images/techstack/matplotlib.svg';
+	import python from '$lib/images/techstack/python.svg';
+	import pytorch from '$lib/images/techstack/pytorch.svg';
+	import react from '$lib/images/techstack/react.svg';
+	import sklearn from '$lib/images/techstack/sklearn.svg';
+	import streamlit from '$lib/images/techstack/streamlit.svg';
+	import tailwind from '$lib/images/techstack/tailwind.svg';
+
+	import FB from '$lib/images/icons/Facebook.svg';
+	import In from '$lib/images/icons/LinkedIn.svg';
+	import GitColor from '$lib/images/icons/GitHub.svg';
 </script>
 
 <svelte:head>
@@ -41,6 +54,39 @@
 	</div>
 </section>
 
+<section id='contacts' class="h-[35rem] mt-[3rem] px-20 flex flex-row justify-between">
+	<div class="w-[28rem]">
+		<h1>Collab?</h1>
+		<p>If you are looking for someone that can wear multiple hats, then I'm your guy!</p>
+		<div class="flex flex-row mt-[3rem] items-center">
+			<img src={FB} alt="Facebook Logo">
+			<img src={In} alt="LinkeIn Logo">
+			<img src={GitColor} alt="GitHub Logo">
+		</div>
+	</div>
+	
+	<div class="mt-[8rem] w-[35rem] flex flex-col gap-y-4" >
+		<div class="flex flex-row gap-x-5">
+			<img src={python} alt="Python">
+			<img src={pytorch} alt="Pytorch">
+			<img src={github} alt="github">
+		</div>
+
+		<div class="flex flex-row gap-x-5">
+			<img src={react} alt="react">
+			<img src={matplotlib} alt="matplotlib">
+			<img src={flutter} alt="flutter">
+		</div>
+
+		<div class="flex flex-row gap-x-5">
+			<img src={tailwind} alt="tailwind">
+			<img src={streamlit} alt="streamlit">
+			<img src={sklearn} alt="sklearn">
+		</div>
+
+	</div>
+</section>
+
 
 
 <style lang="postcss">
@@ -52,4 +98,5 @@
 	.color-accent {
 		color: #EAEEFF; 
 	}
+
 </style>
